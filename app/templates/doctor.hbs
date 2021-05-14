@@ -4,8 +4,9 @@
     <li>Duration:{{doctorDetails.attributes.duration}}!</li>
     <li>Rate:{{doctorDetails.attributes.rate}}!</li>
     <li>CTB:{{doctorDetails.attributes.callToBook}}</li>
-    {{#link-to "doctor.book" doctorDetails}} {{doctorDetails.attributes.description}} {{/link-to}}
+    {{#link-to "book" doctorDetails}} {{doctorDetails.attributes.description}} {{/link-to}}
     {{else}}
         Sorry, nobody is here.
   {{/each}}
 </ul>
+{{outlet}}
