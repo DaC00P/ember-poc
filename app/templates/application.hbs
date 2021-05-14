@@ -1,22 +1,36 @@
 <section class="listapp">
-  <h1>list</h1>
-  {{!-- <BsAccordion as |acc|>
-    
-    <acc.item @value="1" @title="First item">
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-    </acc.item>
-    <acc.item @value="2" as |aitem|>
-        <aitem.title>
-        <strong> Second </strong>
-        <i> item </i>
-        </aitem.title>
-        <aitem.body>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-        </aitem.body>
-    </acc.item>
-    <acc.item @value="3" @title="Third item">
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-    </acc.item>
-</BsAccordion> --}}
+    <BsNavbar class="sidebar"
+        @type="light"
+        @backgroundColor="light"
+        @collapsed={{true}}
+        @onCollapse={{action (mut collapsed) true}}
+        @onExpand={{action (mut collapsed) false}} as |navbar|>
+        <div class="navbar-header">
+            {{navbar.toggle}}
+            {{#link-to "index" class="navbar-brand"}}Request an Appointment{{/link-to}}
+            <strong>The Therapy Center</strong>
+        </div>
+        <navbar.content>
+            <navbar.nav as |nav|>
+            <nav.item>
+                <nav.link-to @route="index">Home</nav.link-to>
+            </nav.item>
+            <nav.item>
+                <nav.link-to @route="doctor">Navbars</nav.link-to>
+            </nav.item>
+            <nav.dropdown as |dd|>
+                <dd.toggle>Dropdown <span class="caret"></span></dd.toggle>
+                <dd.menu as |ddm|>
+                <ddm.item>
+                    <ddm.link-to @route="index">Home</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                    <ddm.link-to @route="doctor">Navbars</ddm.link-to>
+                </ddm.item>
+                </dd.menu>
+            </nav.dropdown>
+            </navbar.nav>
+        </navbar.content>
+    </BsNavbar>
     {{outlet}}
 </section>
