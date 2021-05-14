@@ -1,21 +1,23 @@
 {{#each this.model.data as |bookingDetails|}}
-    {{log bookingDetails.attributes}}
+    {{log this}}
     <section class="doctorDetail">
         <div class="googleMaps">
 
         </div>
         <div class="doctorDetailCard">
+            <div class="bookingpicture">
 
+            </div>
         </div>
         {{#if bookingDetails.attributes.isVideo}}
             {{!-- stretch goal: add an icon of a locked lock if isPublic=true --}}
             <a href="https://www.google.com">
-                VideoLink to: [placeholder]
+                VideoLink to: [placeholder]!!
             </a>
         {{/if}}
     </section>
     {{!-- the below info is in the url --}}
     {{!-- {{#link-to "doctor" bookingDetails}} Back to Doctor {{/link-to}} --}}
     {{else}}
-        Sorry, nobody is here.
+        Sorry, an unexpected error occurred. If you believe this was in error, please reach out to support@notarealemail.com
 {{/each}}

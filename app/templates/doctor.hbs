@@ -1,12 +1,14 @@
 <ul>
+  <p aria-label="service-selection">Please Select Your Service</p>
   {{#each this.model.data as |doctorDetails|}}
     <li>Description:{{doctorDetails.attributes.description}}!</li>
     <li>Duration:{{doctorDetails.attributes.duration}}!</li>
     <li>Rate:{{doctorDetails.attributes.rate}}!</li>
-    <li>CTB:{{doctorDetails.attributes.callToBook}}</li>
-    {{#link-to "book" doctorDetails}} {{doctorDetails.attributes.description}} {{/link-to}}
+
+    {{!-- <BsButton @type="primary" @icon="glyphicon"> --}}
+      <p class="bookbutton">{{#link-to "book" doctorDetails.id tagName="button"}} Book Appointment! {{/link-to}}</p>
+    {{!-- </BsButton> --}}
     {{else}}
         Sorry, nobody is here.
   {{/each}}
 </ul>
-{{outlet}}

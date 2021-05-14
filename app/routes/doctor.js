@@ -2,7 +2,8 @@ import Route from '@ember/routing/route';
 // import fetch from 'fetch';
 
 export default class DoctorRoute extends Route {
-  async model() {
+  model() {
+    // if this fetch logic is used, add asyc back to the model declaration
     // your API call logic goes here!
     console.log('The model hook just ran!');
     // let url = `https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes?filter[clinicianId]=2`;

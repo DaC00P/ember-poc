@@ -5,3 +5,16 @@
 .listapp {
     display: flex
 }
+
+.bookingpicture {
+    background: url(https://widget-cdn.simplepractice.com/assets/images/video-office-wide-694d661cd74e6814382504a66bf2f427.png);
+}
+
+.bookbutton {
+    text-emphasis-color: black
+}
+
+li {
+    list-style: none;
+}
+
