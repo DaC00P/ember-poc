@@ -7,7 +7,10 @@
 }
 
 .bookingpicture {
-    background: url(https://widget-cdn.simplepractice.com/assets/images/video-office-wide-694d661cd74e6814382504a66bf2f427.png);
+    background: url(https://widget-cdn.simplepractice.com/assets/images/video-office-wide-694d661cd74e6814382504a66bf2f427.png) center center no-repeat;
+    width: 260px;
+    height: 170px;
+    background-size: contain;
 }
 
 .bookbutton {

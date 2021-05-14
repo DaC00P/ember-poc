@@ -38,6 +38,20 @@ export default class DoctorRoute extends Route {
             callToBook: 'false',
           },
         },
+        {
+          id: '31822614',
+          type: 'cptCodes',
+          links: {
+            self:
+              'https://johnny-appleseed.clientsecure.me/client-portal-api/cpt-codes/31822614',
+          },
+          attributes: {
+            description: 'Interview Call',
+            duration: 30,
+            rate: '100',
+            callToBook: 'false',
+          },
+        },
       ],
       links: {
         first:

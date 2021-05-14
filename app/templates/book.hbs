@@ -1,5 +1,4 @@
 {{#each this.model.data as |bookingDetails|}}
-    {{log this}}
     <section class="doctorDetail">
         <div class="googleMaps">
 
@@ -12,7 +11,7 @@
         {{#if bookingDetails.attributes.isVideo}}
             {{!-- stretch goal: add an icon of a locked lock if isPublic=true --}}
             <a href="https://www.google.com">
-                VideoLink to: [placeholder]!!
+                VideoLink to: [google.com - placeholder]!!
             </a>
         {{/if}}
     </section>
