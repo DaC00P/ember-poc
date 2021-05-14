@@ -1,0 +1,10 @@
+<ul>
+  {{#each this.model.data as |doctorDetails|}}
+    <li>Description:{{doctorDetails.attributes.description}}!</li>
+    <li>Duration:{{doctorDetails.attributes.duration}}!</li>
+    <li>Rate:{{doctorDetails.attributes.rate}}!</li>
+    <li>CTB:{{doctorDetails.attributes.callToBook}}</li>
+    {{else}}
+        Sorry, nobody is here.
+  {{/each}}
+</ul>
