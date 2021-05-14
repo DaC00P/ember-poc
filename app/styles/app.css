@@ -3,8 +3,17 @@
 }
 
 .listapp {
-    display: flex
+    display: flex;
 }
+
+/* .doctordetaillist {
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 5px;
+} */
 
 .bookingpicture {
     background: url(https://widget-cdn.simplepractice.com/assets/images/video-office-wide-694d661cd74e6814382504a66bf2f427.png) center center no-repeat;
@@ -15,6 +24,17 @@
 
 .bookbutton {
     text-emphasis-color: black
+}
+
+.doctorDetail {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 5px;
+    text-align: inherit;
 }
 
 li {

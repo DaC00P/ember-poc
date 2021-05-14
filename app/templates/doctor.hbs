@@ -1,13 +1,10 @@
-<ul>
+<ul class="doctorDetail">
   <p aria-label="service-selection">Please Select Your Service</p>
   {{#each this.model.data as |doctorDetails|}}
-    <li>Description:{{doctorDetails.attributes.description}}!</li>
-    <li>Duration:{{doctorDetails.attributes.duration}}!</li>
-    <li>Rate:{{doctorDetails.attributes.rate}}!</li>
-
-    {{!-- <BsButton @type="primary" @icon="glyphicon"> --}}
-      <p class="bookbutton">{{#link-to "book" doctorDetails.id tagName="button"}} Book Appointment! {{/link-to}}</p>
-    {{!-- </BsButton> --}}
+    <li>Description:{{doctorDetails.attributes.description}}</li>
+    <li>Duration:{{doctorDetails.attributes.duration}}</li>
+    <li>Rate:{{doctorDetails.attributes.rate}}</li>
+    <p class="bookbutton">{{#link-to "book" doctorDetails.id tagName="button"}} Book Appointment! {{/link-to}}</p>
     {{else}}
         Sorry, nobody is here.
   {{/each}}

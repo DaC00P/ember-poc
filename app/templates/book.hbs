@@ -1,19 +1,28 @@
 {{#each this.model.data as |bookingDetails|}}
+    {{log bookingDetails}}
     <section class="doctorDetail">
         <div class="googleMaps">
-
+            {{!-- left empty intentionally - this div would be where the google maps would integrate --}}
+            {{!-- I would integrate it using https://github.com/sandydoo/ember-google-maps --}}
         </div>
         <div class="doctorDetailCard">
             <div class="bookingpicture">
-
+                {{!-- intentionally empty, CSS applies background here --}}
             </div>
+            <p>Description: {{bookingDetails.attributes.name}} </p>
+            <p>Location: {{bookingDetails.attributes.phone}}</p>
+            <p>Rate:{{bookingDetails.rate}}</p>
+            {{#if bookingDetails.attributes.isVideo}}
+                {{!-- stretch goal: add an icon of a locked lock if isPublic=false --}}
+                {{!-- stretch goal: show a video player icon if isVideo=true --}}
+            {{/if}}
         </div>
-        {{#if bookingDetails.attributes.isVideo}}
-            {{!-- stretch goal: add an icon of a locked lock if isPublic=true --}}
-            <a href="https://www.google.com">
-                VideoLink to: [google.com - placeholder]!!
-            </a>
-        {{/if}}
+            <BsButton @type="primary" @icon="glyphicon glyphicon-download" class="selectbutton">
+                {{!-- NOTE: if there was an action for this button available, I would add @onClick=(action 'select') and add the associated action --}}
+                Select
+            </BsButton>
+                {{!-- NOTE: this button is where the User advances to the next part in the flow, to select dates/times  --}}
+                {{!-- <p class="bookbutton">{{#link-to "appointment-select" bookingDetails.id tagName="button"}} Continue to Select Appointment Date & Time {{/link-to}}</p> --}}
     </section>
     {{!-- the below info is in the url --}}
     {{!-- {{#link-to "doctor" bookingDetails}} Back to Doctor {{/link-to}} --}}
