@@ -1,19 +1,21 @@
-<h1>HELLO</h1>
-{{!-- <BsAccordion as |acc|>
-    
-    <acc.item @value="1" @title="First item">
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-    </acc.item>
-    <acc.item @value="2" as |aitem|>
-        <aitem.title>
-        <strong> Second </strong>
-        <i> item </i>
-        </aitem.title>
-        <aitem.body>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-        </aitem.body>
-    </acc.item>
-    <acc.item @value="3" @title="Third item">
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
-    </acc.item>
-</BsAccordion> --}}
+{{#each this.model.data as |bookingDetails|}}
+    {{log bookingDetails.attributes}}
+    <section class="doctorDetail">
+        <div class="googleMaps">
+
+        </div>
+        <div class="doctorDetailCard">
+
+        </div>
+        {{#if bookingDetails.attributes.isVideo}}
+            {{!-- stretch goal: add an icon of a locked lock if isPublic=true --}}
+            <a href="https://www.google.com">
+                VideoLink to: [placeholder]
+            </a>
+        {{/if}}
+    </section>
+    {{!-- the below info is in the url --}}
+    {{!-- {{#link-to "doctor" bookingDetails}} Back to Doctor {{/link-to}} --}}
+    {{else}}
+        Sorry, nobody is here.
+{{/each}}
