@@ -44,7 +44,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    // NOTE: this is where we would plug in production doctor IDs for widget use
+    ENV.APP.baseUrlForClient = process.env.baseUrlForClient;
+    ENV.APP.doctorId = process.env.doctorId;
   }
 
   return ENV;
